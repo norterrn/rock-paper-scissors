@@ -27,15 +27,10 @@ h2{
 #play-area{
     display: flex;
     justify-content: space-between;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 25%;
+    padding-right: 25%;
     padding-top: 80px;
 }
-
-#rock-el:hover, #paper-el:hover, #scissors-el:hover{
-    box-shadow: 4px;
-}
-
 
 
 #scoreboard-el{
@@ -50,17 +45,17 @@ h2{
 
 #result-el{
     font-size: 2em;
+    margin-top: 30px;
     padding-left: 30%;
     padding-right: 30%;
     text-align: center;
 }
 
+
+
 #rematch{
-    display: flex;
-    justify-content: center;
     margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 42%;
     width: 250px;
     height: 50px;
     font-size: 2em;
