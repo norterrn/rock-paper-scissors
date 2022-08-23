@@ -24,17 +24,16 @@ function playRound(playerSelection) {
   let computerPick = getComputerChoice();
   console.log(`${playerSelection} vs ${computerPick}`);
 
-  // tu zrob ify, sprawdz czym jest playerSelection i computerPick, wyswietl wynik i dodaj pkt
   if (playerSelection === "scissors" && computerPick === "paper"){
-      resultEl.textContent = "Result: Scissors beat paper"
+      resultEl.textContent = "Result: You win. Scissors beat paper"
       resultPlayer += 1
       playerScoreEl.textContent = "Player's score: "+ resultPlayer
   } else if (playerSelection === "paper" && computerPick === "rock"){
-      resultEl.textContent = "Result: Paper beats rock"
+      resultEl.textContent = "Result: You win. Paper beats rock"
       resultPlayer += 1;
       playerScoreEl.textContent = "Player's score: " + resultPlayer
   } else if (playerSelection === "rock" && computerPick === "scissors"){
-      resultEl.textContent = "Result: Rock beats scissors"
+      resultEl.textContent = "Result: You win. Rock beats scissors"
       resultPlayer += 1;
       playerScoreEl.textContent = "Player's score: " + resultPlayer
   } else if (playerSelection === computerPick){
@@ -72,16 +71,17 @@ paperEl.addEventListener("click", function () {
   checkPoints();
 });
 scissorsEl.addEventListener("click", function () {
-  
+  playRound("scissors");
+  checkPoints();
 });
 
 playAgainButton.addEventListener("click", function () {
-  // wyzeruj pkt, pokaz przyciski i schowaj przycisk zagraj ponownie
+ 
   resultComputer = 0
   resultPlayer = 0
   playerScoreEl.textContent = "Player's score: ";
   computerScoreEl.textContent = "Computer's score: ";
-  resultEl.textContent = "Result:"
+  resultEl.textContent = "Result: "
   rockEl.toggleAttribute("hidden");
   paperEl.toggleAttribute("hidden");
   scissorsEl.toggleAttribute("hidden");
