@@ -1,11 +1,11 @@
 let choices = ["rock", "paper", "scissors"];
 
-let rockEl = document.getElementById("rock-el");
-let paperEl = document.getElementById("paper-el");
-let scissorsEl = document.getElementById("scissors-el");
-let resultEl = document.getElementById("result-el");
-let playerScoreEl = document.getElementById("playerscore-el");
-let computerScoreEl = document.getElementById("computerscore-el");
+const rockEl = document.getElementById("rock-el");
+const paperEl = document.getElementById("paper-el");
+const scissorsEl = document.getElementById("scissors-el");
+const resultEl = document.getElementById("result-el");
+const playerScoreEl = document.getElementById("playerscore-el");
+const computerScoreEl = document.getElementById("computerscore-el");
 let resultPlayer = 0;
 let resultComputer = 0;
 let playAgainButton = document.getElementById("rematch");
@@ -43,23 +43,23 @@ function playRound(playerSelection) {
   }
 }
 
-function checkPoints() {
-  if (resultPlayer === 5) {
-    resultEl.textContent =
-      "You won!! The score is " + resultPlayer + " to " + resultComputer;
-    playAgainButton.toggleAttribute("hidden");
-    rockEl.toggleAttribute("hidden");
-    paperEl.toggleAttribute("hidden");
-    scissorsEl.toggleAttribute("hidden");
-  } else if (resultComputer === 5) {
-    resultEl.textContent =
-      "You lost... The score is " + resultPlayer + " to " + resultComputer;
-    playAgainButton.toggleAttribute("hidden");
-    rockEl.toggleAttribute("hidden");
-    paperEl.toggleAttribute("hidden");
-    scissorsEl.toggleAttribute("hidden");
-  }
-}
+// function checkPoints() {
+//   if (resultPlayer === 5) {
+//     resultEl.textContent =
+//       "You won!! The score is " + resultPlayer + " to " + resultComputer;
+//     playAgainButton.toggleAttribute("hidden");
+//     rockEl.toggleAttribute("hidden");
+//     paperEl.toggleAttribute("hidden");
+//     scissorsEl.toggleAttribute("hidden");
+//   } else if (resultComputer === 5) {
+//     resultEl.textContent =
+//       "You lost... The score is " + resultPlayer + " to " + resultComputer;
+//     playAgainButton.toggleAttribute("hidden");
+//     rockEl.toggleAttribute("hidden");
+//     paperEl.toggleAttribute("hidden");
+//     scissorsEl.toggleAttribute("hidden");
+//   }
+// }
 
 rockEl.addEventListener("click", function () {
   playRound("rock");
